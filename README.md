@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
+# Local Dev Set Up
+In order to run it locally on dev, commented following in server.js
+`app.use(express.static(__dirname + "/dist/template-app"));
+app.get("/*", function(req, res) {
+  res.sendFile(path.join(__dirname + "/dist/template-app/index.html"));
+});`
+
+And running command `ng serve --proxy-config proxy.conf.json` Under this folder
+What this to do is to make sure http request from angular will routing to the correct port instead of default 4200
+In prod, we don't need to set it up since express has already routed for us
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
