@@ -8,7 +8,7 @@ var app = express();
 
 
 // Looking for current directory with project name found in package.json
-app.use(express.static(__dirname, "/dist/template-app"));
+app.use(express.static(__dirname + "/dist/template-app"));
 app.get("/*", function(req, res) {
   res.sendFile(path.join(__dirname + "/dist/template-app/index.html"));
 });
