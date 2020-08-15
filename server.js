@@ -7,9 +7,9 @@ var app = express();
 app.get("/api/test", function(req, res) {
   const connection = mysql.createConnection({
       host: process.env.DB_HOST_NAME || "localhost",
-      user: process.env.DB_USER_NAME || "root",
-      password: process.env.DB_PASSWORD || "Zzqssy95",
-      database: process.env.DB_SCHEMA_NAME || "db_test"
+      user: process.env.DB_USER_NAME || "your username",
+      password: process.env.DB_PASSWORD || "your password",
+      database: process.env.DB_SCHEMA_NAME || "your local db schema"
   });
 
   connection.query("SELECT * FROM team_member", (err, rows, fields) => {
