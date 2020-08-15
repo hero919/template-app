@@ -1,21 +1,11 @@
-var express = require("express");
+const express = require("express");
+const path = require("path");
+
+
 // var mysql = require("mysql");
 
 var app = express();
 
-// app.get("/", function(req, res) {
-//   const connection = mysql.createConnection({
-//       host: "",
-//       user: "",
-//       password: "",
-//       database: ""
-//   });
-//
-//   connection.query("", (err, rows, fields) => {
-//      res.json(rows);
-//   })
-//
-// })
 
 // Looking for current directory with project name found in package.json
 app.use(express.static(__dirname, "/dist/template-app"));
