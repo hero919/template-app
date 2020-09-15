@@ -22,9 +22,9 @@ app.get("/api/test", function(req, res) {
 
 // Looking for current directory with project name found in package.json
 // Comment following lines if running locally
-app.use(express.static(__dirname + "/dist/template-app"));
+app.use(express.static(__dirname + "/template-app"));
 app.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname + "/dist/template-app/index.html"));
+  res.sendFile(path.join(__dirname + "/template-app/index.html"));
 });
 
 // process.env.PORT is naming convention for port info
