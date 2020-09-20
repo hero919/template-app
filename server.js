@@ -11,9 +11,9 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 const pool = mysql.createPool({
   host: process.env.DB_HOST_NAME || "localhost",
-  user: process.env.DB_USER_NAME || "root",
-  password: process.env.DB_PASSWORD || "Zzqssy95",
-  database: process.env.DB_SCHEMA_NAME || "db_test"
+  user: process.env.DB_USER_NAME || "you dbname",
+  password: process.env.DB_PASSWORD || "your password",
+  database: process.env.DB_SCHEMA_NAME || "your schema name"
 })
 
 app.get("/api/persons", function(req, res) {
